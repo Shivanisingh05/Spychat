@@ -1,5 +1,6 @@
 
 # existing user or create a new user
+# user details
 default_user = input("Would you like to continue with the default user or create a new one (Default or Create) ?")
 # for existing user
 if default_user == "Default" or default_user == "default":
@@ -20,6 +21,7 @@ elif not (not (default_user == "Create") and not (default_user == "create")):
             if spy_age > 12 and spy_age < 50:
                 # checking rating
                 spy_rating = float(input("What is your spy rating?"))
+
                 if spy_rating > 4.5:
                     print("Outstanding!")
                 elif spy_rating > 3.5 and spy_rating <= 4.5:
