@@ -5,7 +5,7 @@ default_user = input("Would you like to continue with the default user or create
 # for existing user
 if default_user == "Default" or default_user == "default":
  import spy_details
-# for a new user
+ # for a new user
 elif not (not (default_user == "Create") and not (default_user == "create")):
         # asking name
         spy_name = input("What's your name?")
@@ -30,11 +30,15 @@ elif not (not (default_user == "Create") and not (default_user == "create")):
                     print("You can surely improve!")
                 else:
                     print("Don't Worry! We'll help you!")
+                    print("Welcome " + spy_salutation + " " + spy_name + " your age is " + str(spy_age) + " and rating is " + str(spy_rating) + "!")
                 # if spy is online
                 spy_is_online = True
                 # welcome with details
                 print("Authentication complete.")
                 print("Proud to have you onboard!")
+                print("Welcome " + spy_salutation + " " + spy_name + " your age is " + str(
+                    spy_age) + " and rating is " + str(
+                    spy_rating) + "!")
             # age is not eligible
             else:
                 print("You are not ready to be a spy yet!")
