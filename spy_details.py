@@ -1,12 +1,28 @@
-#------------------------------------------------------------------------------------
-#  The Spy_details.py file is meant for a Default user and shall be imported when the
-# user is given the option to continue as a default user or create a new spy user.
-#------------------------------------------------------------------------------------
+####### Default User #######
+# default status
 
-# list of default status
-STATUS_MESSAGES = ['My name is Shivani.', 'I love Python', 'Location: New Delhi']
+current_status_message = None
 
-spy_name = 'Shivani Singh'
-spy_rating = 4.5
-spy_age = 21
-spy_salutation = 'Ms.'
+# default status list
+status = ['My name is Shivani Singh.', 'I am student of Acadview.', 'Location: New Delhi']
+
+class User:
+    # creating class
+    def __init__(self, uname, salutation, age, rating):
+        self.uname = uname
+        self.salutation = salutation
+        self.age = age
+        self.rating = rating
+
+
+# define user_name, age, rating
+default = User('Shivani Singh', 'Ms.', 20, 4.3)
+
+
+# details of some existing friends
+friend_one = User('Neetu', 'Ms.', 21, 4.5)
+friend_two = User('Nancy', 'Ms.', 20, 3.9)
+friend_three = User('Kuldeep', 'Mr.', 21, 3.7)
+
+# lists of friends
+friends = [friend_one, friend_two, friend_three]
