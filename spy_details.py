@@ -1,28 +1,40 @@
-####### Default User #######
-# default status
+####### Information Of A Default User #######
+from datetime import datetime
 
+# default status
 current_status_message = None
 
-# default status list
-status = ['My name is Shivani Singh.', 'I am student of Acadview.', 'Location: New Delhi']
+# list of default status
+status = ['My name is Shivani Singh.', 'Location: New Delhi']
+
 
 class User:
-    # creating class
+    # create class
     def __init__(self, uname, salutation, age, rating):
         self.uname = uname
         self.salutation = salutation
         self.age = age
         self.rating = rating
+        self.is_online = True
+        self.chats = []
+        self.current_status_message = None
+
+
+class ChatMessage:
+    def __init__(self, message, sent_by_me):
+        self.message = message
+        self.time = datetime.now()
+        self.sent_by_me = sent_by_me
 
 
 # define user_name, age, rating
-default = User('Shivani Singh', 'Ms.', 20, 4.3)
+user_1 = User('Shivani Singh', 'Ms.', 20, 4.5)
 
 
 # details of some existing friends
-friend_one = User('Neetu', 'Ms.', 21, 4.5)
-friend_two = User('Nancy', 'Ms.', 20, 3.9)
-friend_three = User('Kuldeep', 'Mr.', 21, 3.7)
+friend_one = User('Ujjwal', 'Mr.', 21, 3.1)
+friend_two = User('Princi', 'Ms.', 20, 3.6)
+friend_three = User('Vivek', 'Mr.', 20, 4.8)
 
 # lists of friends
 friends = [friend_one, friend_two, friend_three]
