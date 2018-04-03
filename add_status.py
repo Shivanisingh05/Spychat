@@ -3,12 +3,12 @@ from spy_details import status
 
 
 def status_message(current_status_message):
-    #check current status message
+    #checking current status message
     if current_status_message != None:
-        print('Your current status message is %s \n' % current_status_message)
+        print('Your current status message is: %s \n' % current_status_message)
     else:
         print('You don\'t have any status message currently \n')
-        question = raw_input("do you want to select status from old status? y/n")
+        question = raw_input("Do you want to select status from old status? y/n")
         # if user want to add new status
         if question.upper() == "N":
             new_status_message = raw_input("What status message do you want to set?: ")

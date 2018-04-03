@@ -1,9 +1,9 @@
-from spy_details import User, friends
+from spy_details import Spy, friends
 
 
 def add_friend():
     # using class user in spy_details
-    new_friend = User(" ", " ", 0, 0.0)
+    new_friend = Spy(" ", " ", 0, 0.0)
 
     # ask user for name
     new_friend.name = raw_input("Please add your friend's name: ")
@@ -27,7 +27,7 @@ def add_friend():
         return add_friend()
 
     # concatination for full name
-    new_friend.name = new_friend.salutation + " " + new_friend.name
+    new_friend.uname = new_friend.salutation + " " + new_friend.name
 
     # ask for age of friend
     new_friend.age = int(raw_input("Age: "))

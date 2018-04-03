@@ -13,7 +13,7 @@ def select_a_friend():
         counter = counter + 1       # access all list.
 
     # ask user to select friend.
-    friend_choice = int(raw_input("\nSelect from the list : "))
+    friend_choice = int(raw_input("\nPlease select from the given list : "))
     #  selected friend to perform action
     friend_choice_position = int(friend_choice) - 1
 

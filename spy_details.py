@@ -8,7 +8,7 @@ current_status_message = None
 status = ['My name is Shivani Singh.', 'Location: New Delhi']
 
 
-class User:
+class Spy:
     # create class
     def __init__(self, uname, salutation, age, rating):
         self.uname = uname
@@ -20,7 +20,7 @@ class User:
         self.current_status_message = None
 
 
-class ChatMessage:
+class Chat:
     def __init__(self, message, sent_by_me):
         self.message = message
         self.time = datetime.now()
@@ -28,13 +28,13 @@ class ChatMessage:
 
 
 # define user_name, age, rating
-user_1 = User('Shivani Singh', 'Ms.', 20, 4.5)
+spy = Spy('Shivani Singh', 'Ms.', 20, 4.5)
 
 
 # details of some existing friends
-friend_one = User('Ujjwal', 'Mr.', 21, 3.1)
-friend_two = User('Princi', 'Ms.', 20, 3.6)
-friend_three = User('Vivek', 'Mr.', 20, 4.8)
+friend_one = Spy('Ujjwal', 'Mr.', 21, 3.1)
+friend_two = Spy('Princi', 'Ms.', 20, 3.6)
+friend_three = Spy('Vivek', 'Mr.', 20, 4.8)
 
 # lists of friends
 friends = [friend_one, friend_two, friend_three]
