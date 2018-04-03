@@ -1,6 +1,6 @@
 from steganography.steganography import Steganography
 from select_friend import select_a_friend
-from spy_details import friends, Chat
+from spy_details import friends, ChatMessage
 
 
 def read_message():
@@ -11,6 +11,6 @@ def read_message():
     print(secret_text)
 
     # add the chat to sender
-    new_chat = Chat(secret_text, False)
+    new_chat = ChatMessage(secret_text, False)
     friends[sender].chats.append(new_chat)
     print("Your secret message has been saved.")

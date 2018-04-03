@@ -1,6 +1,6 @@
 from steganography.steganography import Steganography
 from select_friend import select_a_friend
-from spy_details import friends, Chat
+from spy_details import friends, ChatMessage
 
 
 def send_message():
@@ -12,7 +12,7 @@ def send_message():
     Steganography.encode(original_image, output_path, text)
 
     # for storing the message in chat message class
-    new_chat = Chat(text, True)
+    new_chat = ChatMessage(text, True)
 
     # along the name of friend with whom we add message
     friends[friend_choice].chats.append(new_chat)

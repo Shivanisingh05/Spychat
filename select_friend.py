@@ -16,11 +16,11 @@ def select_a_friend():
     friend_choice = int(raw_input("\nPlease select from the given list : "))
     #  selected friend to perform action
     friend_choice_position = int(friend_choice) - 1
-
     # Check if user has out of index choice.
     if friend_choice_position + 1 > len(friends):
         print("Sorry, this friend is not present.")
         exit()
     else:
         # returns the selected friend to perform actions
+        print("You have selected %s with index %d!" % (friends[friend_choice_position].uname, friend_choice_position))
         return friend_choice_position

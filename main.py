@@ -1,5 +1,5 @@
 from spy_details import spy
-from spy_details import Spy, Chat
+from spy_details import Spy, ChatMessage
 from menu import start_chat
 
 print("THE SPY CHAT!")
