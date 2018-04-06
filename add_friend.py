@@ -53,7 +53,7 @@ def add_friend():
 
         return add_friend()
 
-    new_friend=Spy(name=new_friend.name, age=new_friend.age, rating=new_friend.rating)
+    new_friend=Spy(name=new_friend.name, salutation=new_friend.salutation, age=new_friend.age, rating=new_friend.rating)
     # add friend if all conditions check
     friends.append(new_friend)
 
