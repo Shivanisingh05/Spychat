@@ -53,13 +53,13 @@ def add_friend():
 
         return add_friend()
 
-    new_friend=Spy(name=new_friend.name, salutation=new_friend.salutation, age=new_friend.age, rating=new_friend.rating)
+    new_friend=Spy(name=new_friend.name, age=new_friend.age, rating=new_friend.rating)
     # add friend if all conditions check
     friends.append(new_friend)
 
     with open('friends.csv', 'a') as friends_data:
         writer = csv.writer(friends_data)
-        writer.writerow([new_friend.name, new_friend.salutation, new_friend.rating, new_friend.age, spy.is_online])
+        writer.writerow([new_friend.name, new_friend.rating, new_friend.age, spy.is_online])
 
 
 

@@ -21,7 +21,7 @@ def start_chat(name, age, rating):
           read = csv.reader(chats_data)
 
         for row in read:
-          chat = ChatMessage(message=row[0],  sent_by_me=row[2])
+          chat = ChatMessage(message=row[0],  sent_by_me=row[1])
           ChatMessage.append(chat)
 
 
