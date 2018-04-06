@@ -12,7 +12,7 @@ def start_chat(name, age, rating):
             reader = csv.reader(friends_data)
 
             for row in reader:
-                spy = Spy(name=row[0], salutation=row[1], rating=float(row[2]), age=int(row[3]))
+                spy = Spy(name=row[0], rating=float(row[1]), age=int(row[2]))
                 friends.append(spy)
 
     def load_chats():
