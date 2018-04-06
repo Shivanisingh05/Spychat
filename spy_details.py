@@ -10,8 +10,8 @@ status = ['My name is Shivani Singh.', 'Location: New Delhi']
 
 class Spy:
     # create class
-    def __init__(self, uname, salutation, age, rating):
-        self.uname = uname
+    def __init__(self, name, salutation, age, rating):
+        self.name = name
         self.salutation = salutation
         self.age = age
         self.rating = rating

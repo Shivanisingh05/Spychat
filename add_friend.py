@@ -1,4 +1,6 @@
-from spy_details import Spy, friends
+from spy_details import Spy, friends, spy
+import csv
+
 
 
 def add_friend():
@@ -27,7 +29,8 @@ def add_friend():
         return add_friend()
 
     # concatination for full name
-    new_friend.uname = new_friend.salutation + " " + new_friend.name
+    new_friend.name = new_friend.salutation + " " + new_friend.name
+
 
     # ask for age of friend
     new_friend.age = int(raw_input("Age: "))
@@ -43,12 +46,23 @@ def add_friend():
 
     if new_friend.rating > 0.0:
         True
+
+
     else:
         print("Ratting should be more than 0.0")
+
         return add_friend()
 
+    new_friend=Spy(name=new_friend.name, salutation=new_friend.salutation, age=new_friend.age, rating=new_friend.rating)
     # add friend if all conditions check
     friends.append(new_friend)
+
+    with open('friends.csv', 'a') as friends_data:
+        writer = csv.writer(friends_data)
+        writer.writerow([new_friend.name, new_friend.salutation, new_friend.rating, new_friend.age, spy.is_online])
+
+
+
     print('Friend Added!')
 
     # check total no of friends in a list.

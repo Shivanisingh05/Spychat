@@ -45,7 +45,7 @@ def status_message(current_status_message):
             # when user has wrong choice or choice that does not exist.
             else:
                 print("Invalid choice. Try again.")
-        # when user has diffrent choice than yes and no
+        # when user has different choice than yes and no
         else:
             print('The option you choose is not valid! Press either y or n.')
         # updated message will be read

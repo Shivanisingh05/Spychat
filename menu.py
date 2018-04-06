@@ -2,10 +2,28 @@ from add_status import status_message
 from send_message import send_message
 from add_friend import add_friend
 from read_message import read_message
-
+from spy_details import Spy, friends, ChatMessage
+import csv
 
 def start_chat(name, age, rating):
     from spy_details import current_status_message
+    def load_friends():
+        with open('friends.csv', 'rb') as friends_data:
+            reader = csv.reader(friends_data)
+
+            for row in reader:
+                spy = Spy(name=row[0], salutation=row[1], rating=float(row[2]), age=int(row[3]))
+                friends.append(spy)
+
+    def load_chats():
+
+        with open('chats.csv', 'rb') as chats_data:
+          read = csv.reader(chats_data)
+
+        for row in read:
+          chat = ChatMessage(message=row[0],  sent_by_me=row[2])
+          ChatMessage.append(chat)
+
 
     if not age > 12 and age < 50:
         # invalid age.
@@ -25,6 +43,8 @@ def start_chat(name, age, rating):
         # displaying menu for user.
 
     show_menu = True
+
+
     while show_menu:
         menu_choices = "What do you want to do? \n 1. Add a status update \n " \
                    "2. Add a friend \n 3. Send a secret message \n " \

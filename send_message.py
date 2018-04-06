@@ -1,6 +1,7 @@
 from steganography.steganography import Steganography
 from select_friend import select_a_friend
 from spy_details import friends, ChatMessage
+import csv
 
 
 def send_message():
@@ -23,3 +24,6 @@ def send_message():
     # name of the friend along which we add message.
     friends[friend_choice].chats.append(new_chat)
     print("Secret message is ready.")
+    with open('chat.csv', 'a') as chats_data:
+        writer = csv.writer(chats_data)
+        writer.writerow([friends[friend_choice].name, new_chat.message, new_chat.time, new_chat.sent_by_me ])

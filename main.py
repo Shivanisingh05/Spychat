@@ -2,19 +2,21 @@ from spy_details import spy
 from spy_details import Spy, ChatMessage
 from menu import start_chat
 
+
+
 print("THE SPY CHAT!")
 
 # existing user or create a new user
 
-question = "Do you want to continue as " + spy.uname + " (Y/N): "
+question = "Do you want to continue as " + spy.name + " (Y/N): "
 existing = raw_input(question)
 
 # for existing user
 if existing.upper() == "Y":
         import spy_details
-        print('WELCOME '+spy.uname)
+        print('WELCOME '+spy.name)
         # starting chat application.
-        start_chat(spy.uname, spy.age, spy.rating)
+        start_chat(spy.name, spy.age, spy.rating)
 
 # for a new user
 elif existing.upper() == "N":
