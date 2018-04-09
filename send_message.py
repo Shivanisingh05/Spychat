@@ -1,29 +1,33 @@
 from steganography.steganography import Steganography
 from select_friend import select_a_friend
-from spy_details import friends, ChatMessage
+from datetime import  datetime
+from spy_details import  *
 import csv
 
 
 def send_message():
-    friend_choice = select_a_friend()
-
+    #
+    friend_choice = friends[select_a_friend()].name
     original_image = raw_input("Enter the name of the image?")
     output_path = 'output.jpg'
     text = raw_input("Enter your secret message. ")
     Steganography.encode(original_image, output_path, text)
-
-    # for storing the message in chat message class
-    new_chat = ChatMessage(text, True)
-
-    # along the name of friend with whom we add message
-    friends[friend_choice].chats.append(new_chat)
-
     # Successful message after encoding
     print("Encryption successfully!!")
+    # the message will be stored in chat message class
+    new_chat = ChatMessage(spy_n= spy.name, friend_n= friend_choice, time= datetime.now().strftime("%d %B %Y"), message=text)
 
     # name of the friend along which we add message.
-    friends[friend_choice].chats.append(new_chat)
-    print("Secret message is ready.")
-    with open('chat.csv', 'a') as chats_data:
+    chats.append(new_chat)
+    print("your secret message is ready.")
+    with open('chats.csv', 'a') as chats_data:
         writer = csv.writer(chats_data)
-        writer.writerow([friends[friend_choice].name, new_chat.message, new_chat.time, new_chat.sent_by_me ])
+        writer.writerow([new_chat.spy_n, new_chat.friend_n, new_chat.time, new_chat.message])
+
+
+
+
+
+    #with open('chats.csv', 'wb') as chats_data:
+        #writer = csv.writer(chats_data)
+        #writer.writerow([friends[friend_choice].name, new_chat.message, new_chat.time, new_chat.sent_by_me ])

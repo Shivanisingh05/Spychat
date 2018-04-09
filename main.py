@@ -1,13 +1,9 @@
-from spy_details import spy
-from spy_details import Spy, ChatMessage
+from spy_details import *
 from menu import start_chat
 
-
-
-print("THE SPY CHAT!")
+print("WELCOME TO SPY CHAT!")
 
 # existing user or create a new user
-
 question = "Do you want to continue as " + spy.name + " (Y/N): "
 existing = raw_input(question)
 
