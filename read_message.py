@@ -56,8 +56,8 @@ def read_message():
 
         print("Nothing to decode from the image as it contains no secret message.")
     #-------------------------------------------------------------------------------------------------------------------
-    new_chat = ChatMessage(spy_n=spy.name, friend_n=sender, time=datetime.now().strftime("%d %B %Y"),message=secret_text)
-    print("Your secret message has been saved.")
-    with open('chats.csv', 'a') as chats_records:
-        write = csv.writer(chats_records)
-        write.writerow([new_chat.spy_n, new_chat.friend_n, new_chat.time, new_chat.message])
+    #new_chat = ChatMessage(spy_n=spy.name, friend_n=friends[sender].name, time=datetime.now().strftime("%d %B %Y"),message=secret_text)
+    #print("Your secret message has been saved.")
+    #with open('chats.csv', 'a') as chats_records:
+        #write = csv.writer(chats_records)
+        #write.writerow([new_chat.spy_n, new_chat.friend_n, new_chat.time, new_chat.message])
