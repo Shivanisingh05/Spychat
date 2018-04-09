@@ -18,7 +18,7 @@ def select_a_friend():
         exit()
     else:
         print("You have selected %s with index %d!" % (friends[friend_choice_position].name, friend_choice_position))
-        return friend_choice
+        return friend_choice_position
 
 
 

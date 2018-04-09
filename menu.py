@@ -46,7 +46,7 @@ def start_chat(name, age, rating):
             reader = csv.reader(chat_data)
             for row in reader:
                 try:
-                    chat = ChatMessage(spy_n=row[0], friend_n=row[1], time=row[2], message=row[3])
+                    chats.append(ChatMessage(spy_n=row[0], friend_n=row[1], time=row[2], message=row[3]))
                 except IndexError:
                     pass
                 continue

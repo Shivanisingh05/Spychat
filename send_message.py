@@ -28,6 +28,3 @@ def send_message():
 
 
 
-    #with open('chats.csv', 'wb') as chats_data:
-        #writer = csv.writer(chats_data)
-        #writer.writerow([friends[friend_choice].name, new_chat.message, new_chat.time, new_chat.sent_by_me ])
