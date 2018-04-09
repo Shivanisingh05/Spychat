@@ -24,7 +24,7 @@ def read_message():
 
             # Help your friend by sending him a helping message
             print ("Don't panic !!")
-            print ("I am coming to rescue.")
+            print ("I am coming to rescue.\n\n")
 
             # Adding the chat with the sender
             new_chat = ChatMessage(spy_n= spy.name, friend_n= sender, time= datetime.now().strftime("%d %B %Y"), message=secret_text)
@@ -33,31 +33,25 @@ def read_message():
 
         # When there was no case of emergency
         else:
-            # Adding the chat with the sender
-            new_chat = ChatMessage(spy_n=spy.name, friend_n=sender, time=datetime.now().strftime("%d %B %Y"), message=secret_text)
-            friends[sender].chat.append(new_chat)
-            print("Your secret message has been saved!")
+             #Adding the chat with the sender
+             new_chat = ChatMessage(spy_n=spy.name, friend_n=sender, time=datetime.now().strftime("%d %B %Y"), message=secret_text)
+             friends[sender].chat.append(new_chat)
+             print("Your secret message has been saved!")
 
         # Print the avg words spoken by your friend
         print "Average words said by",
         print(colored(friends[sender].name, 'red'))
         print "is",
         print(colored(friends[sender].count, 'red'))
-
-
-        # Delete a spy from your list of spies if they are speaking too much
-        if len(words) > 100:
-            print(colored(friends[sender].name,'red'))
-            print("Removed from friends list. What a chatter box! What a drag!!!")
-            # Removes that chatterbox friend
-            friends.remove(friends[sender])
-    # When the image contains no secret message
-    # 'TypeError' handling
-
-        print("Nothing to decode from the image as it contains no secret message.")
-    #-------------------------------------------------------------------------------------------------------------------
-    #new_chat = ChatMessage(spy_n=spy.name, friend_n=friends[sender].name, time=datetime.now().strftime("%d %B %Y"),message=secret_text)
-    #print("Your secret message has been saved.")
-    #with open('chats.csv', 'a') as chats_records:
-        #write = csv.writer(chats_records)
-        #write.writerow([new_chat.spy_n, new_chat.friend_n, new_chat.time, new_chat.message])
+    #
+    #
+    #     # Delete a spy from your list of spies if they are speaking too much
+    #     if len(words) > 100:
+    #         print(colored(friends[sender].name,'red'))
+    #         print("Removed from friends list. What a chatter box! What a drag!!!")
+    #         # Removes that chatterbox friend
+    #         friends.remove(friends[sender])
+    # # When the image contains no secret message
+    #
+    #
+    #     print("Nothing to decode from the image as it contains no secret message.")
